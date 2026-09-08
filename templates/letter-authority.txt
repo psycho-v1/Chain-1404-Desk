@@ -1,0 +1,29 @@
+Subject: Holder-prepared technical pack — Chain ID 1404 / address {{address}}
+
+This is holder-prepared technical output from 1404 Desk. It is not a finding of breach.
+
+It is a static, read-only capture of public JSON-RPC answers plus locally hashed files. It is not a complaint form, not an expert report, and not a request that any authority pick a “real” Chain 1404.
+
+Address: {{address}}
+Label: {{label}}
+Exchange UID / deposit / tx (if supplied by the holder): {{exchangeUid}} / {{depositAddress}} / {{txHash}}
+Captured at (UTC): {{capturedAt}}
+Document ID: {{documentId}}
+Optional signature of the document ID: {{signature}}
+Optional signer: {{signer}}
+
+Summary:
+{{summary}}
+
+Documented public context (not an accusation):
+- Shared genesis and block 316,001 on both labelled families.
+- Documented divergence of hashes / state roots at block 316,002 (17 Feb 2026 22:03:01 UTC).
+- Genesis allocation sweep window cited in public discussion: 11 Feb 2026 08:07–08:28 UTC.
+
+How to read the ZIP:
+1. Verify SHA256SUMS.txt against the files.
+2. Open review.json and compare community vs scan-family rows.
+3. Treat any truncated contract address as unverified.
+4. A freeze flag means compliant nodes on that history may reject the address’s transactions. It is not the same as a court confiscation and does not identify a person.
+
+Not legal advice. MIT-licensed unofficial tool.

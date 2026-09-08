@@ -1,0 +1,26 @@
+Subject: Technical record for account {{exchangeUid}} — Chain ID 1404 address {{address}}
+
+To the support team,
+
+This is holder-prepared technical output from 1404 Desk. It is not a finding of breach.
+
+I am writing about exchange user ID {{exchangeUid}} and deposit address {{depositAddress}} related to transaction {{txHash}}.
+
+On-chain address under review: {{address}}
+Optional label: {{label}}
+Capture time (UTC): {{capturedAt}}
+Document ID (SHA-256): {{documentId}}
+Optional personal_sign signature: {{signature}}
+Optional signer: {{signer}}
+
+Plain-language summary produced by the static reader:
+{{summary}}
+
+Chain ID 1404 currently has two incompatible public histories after block 316,002 (17 Feb 2026 22:03:01 UTC). A balance, freeze flag, or deposit that appears on one labelled RPC family may be absent on the other. Please read both columns in the attached review.json before treating a single explorer screenshot as complete.
+
+This pack does not ask you to credit a chain. It asks you to record that two public RPC families were queried and to keep the hashes.
+
+Not legal, financial, or tax advice.
+Not affiliated with BlockDAG, bdagscan, or any RPC operator.
+
+Attachments: review.json, files/, SHA256SUMS.txt
