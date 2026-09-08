@@ -4,7 +4,6 @@ A read-only, mobile-friendly static dApp that helps Chain ID 1404 (BDAG) holders
 
 **Not affiliated with BlockDAG, bdagscan, or any RPC operator.**
 
-Live Pages URL pattern: `https://<github-username>.github.io/chain1404-desk/`
 
 ![logo](assets/logo.svg)
 
@@ -67,18 +66,6 @@ Scan family:
 Chain ID 1404 (`0x57c`). Native symbol BDAG, 18 decimals.
 
 Documented fork context: shared genesis and block 316001; hashes / state roots diverge at block 316002 (17 Feb 2026 22:03:01 UTC).
-
-## How to run locally
-
-```bash
-git clone https://github.com/<user>/chain1404-desk.git
-cd chain1404-desk
-python3 -m http.server 8080
-```
-
-Open http://127.0.0.1:8080/
-
-Any other static server works (`npx serve`, Caddy, nginx).
 
 ## How to verify
 
