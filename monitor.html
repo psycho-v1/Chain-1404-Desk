@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freeze & admin monitor · 1404 Desk</title>
+  <meta name="description" content="Owner, code, and freeze lookups on labelled Chain 1404 RPCs.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("desk-theme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="monitor">
+  <div id="nav-root"></div>
+  <div id="agree-root"></div>
+  <main id="page-main" class="container py-4">
+<h1 class="h3 mb-3"><i class="fa-solid fa-snowflake me-2"></i>Freeze &amp; admin monitor</h1>
+    <p>Facts from public RPC reads. This page does not title anyone a thief.</p>
+    <div id="verifyBanner"></div>
+    <div class="desk-card p-3 mb-3">
+      <label class="form-label" for="monitorRpc">RPC used for this page</label>
+      <select class="form-select" id="monitorRpc"></select>
+      <button class="btn btn-accent mt-3" type="button" id="refreshAdmin">Refresh owner and code</button>
+      <p class="small mt-2 mb-0" id="lastPoll">Last successful poll: —</p>
+    </div>
+    <div class="desk-card p-3 mb-3">
+      <h2 class="h5">Address not fully pinned — paste verified address</h2>
+      <p class="small">Truncated prefixes from source dossiers are not callable. Overrides stay in localStorage on this device only.</p>
+      <div id="overrideFields"></div>
+    </div>
+    <div id="adminCards"></div>
+    <div class="desk-card p-3 mb-3">
+      <h2 class="h5">Live isBlocked / isRestricted</h2>
+      <form id="lookupForm" class="row g-2 align-items-end">
+        <div class="col-md-8">
+          <label class="form-label" for="lookupAddress">Address</label>
+          <input class="form-control mono" id="lookupAddress" required placeholder="0x…">
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-accent w-100" type="submit">Look up</button>
+        </div>
+      </form>
+      <div id="lookupOut" class="mt-3"></div>
+    </div>
+    <div class="desk-card p-3" id="frozenNote"></div>
+  </main>
+  <div id="footer-root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/agreements.js"></script>
+  <script src="js/rpc.js"></script>
+  <script src="js/monitor.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

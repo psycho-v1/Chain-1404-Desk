@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add networks · 1404 Desk</title>
+  <meta name="description" content="Add a labelled Chain 1404 RPC to a browser wallet.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("desk-theme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="networks">
+  <div id="nav-root"></div>
+  <div id="agree-root"></div>
+  <main id="page-main" class="container py-4">
+<h1 class="h3 mb-3"><i class="fa-solid fa-network-wired me-2"></i>Add networks to wallet</h1>
+    <div class="alert-strip p-3 mb-4">
+      <i class="fa-solid fa-triangle-exclamation me-2"></i>
+      Wallets key networks by chain ID. Both use 1404. Adding both does not give two live networks at once. You must switch the RPC by hand. Sending coins on the wrong history will not appear on the other.
+    </div>
+    <div class="row g-3 mb-4">
+      <div class="col-lg-6">
+        <div class="desk-card p-4 h-100">
+          <h2 class="h5">Add “BDAG Community 1404”</h2>
+          <p>RPC <span class="hex">https://rpc.blockdag.engineering</span>
+            <button class="btn btn-ghost copy-btn" data-copy="https://rpc.blockdag.engineering" type="button" aria-label="Copy RPC"><i class="fa-solid fa-copy"></i></button></p>
+          <p>Explorer <span class="hex">https://explorer.blockdag.engineering</span>
+            <button class="btn btn-ghost copy-btn" data-copy="https://explorer.blockdag.engineering" type="button" aria-label="Copy explorer"><i class="fa-solid fa-copy"></i></button></p>
+          <button class="btn btn-accent" type="button" data-add-network="community"><i class="fa-solid fa-wallet me-1"></i>wallet_addEthereumChain</button>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="desk-card p-4 h-100">
+          <h2 class="h5">Add “BDAG Scan-family 1404”</h2>
+          <p>RPC <span class="hex">https://rpc.bdagscan.com</span>
+            <button class="btn btn-ghost copy-btn" data-copy="https://rpc.bdagscan.com" type="button" aria-label="Copy RPC"><i class="fa-solid fa-copy"></i></button></p>
+          <p>Explorer <span class="hex">https://bdagscan.com</span>
+            <button class="btn btn-ghost copy-btn" data-copy="https://bdagscan.com" type="button" aria-label="Copy explorer"><i class="fa-solid fa-copy"></i></button></p>
+          <button class="btn btn-accent" type="button" data-add-network="scan"><i class="fa-solid fa-wallet me-1"></i>wallet_addEthereumChain</button>
+        </div>
+      </div>
+    </div>
+    <div class="desk-card p-4">
+      <h2 class="h5">Manual fields (no browser wallet)</h2>
+      <p>Copy these into Trust Wallet or MetaMask custom network. Chain ID is decimal 1404 or hex 0x57c.</p>
+      <div class="table-responsive">
+        <table class="table table-desk">
+          <thead><tr><th>Field</th><th>Community</th><th>Scan-family</th></tr></thead>
+          <tbody>
+            <tr><td>Network name</td><td>BDAG Community 1404</td><td>BDAG Scan-family 1404</td></tr>
+            <tr><td>RPC URL</td>
+              <td><span class="hex">https://rpc.blockdag.engineering</span> <button class="btn btn-ghost copy-btn" data-copy="https://rpc.blockdag.engineering" type="button"><i class="fa-solid fa-copy"></i></button></td>
+              <td><span class="hex">https://rpc.bdagscan.com</span> <button class="btn btn-ghost copy-btn" data-copy="https://rpc.bdagscan.com" type="button"><i class="fa-solid fa-copy"></i></button></td></tr>
+            <tr><td>Chain ID</td><td>1404 <button class="btn btn-ghost copy-btn" data-copy="1404" type="button"><i class="fa-solid fa-copy"></i></button></td><td>1404</td></tr>
+            <tr><td>Symbol</td><td>BDAG</td><td>BDAG</td></tr>
+            <tr><td>Decimals</td><td>18</td><td>18</td></tr>
+            <tr><td>Explorer</td>
+              <td><span class="hex">https://explorer.blockdag.engineering</span></td>
+              <td><span class="hex">https://bdagscan.com</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <div id="footer-root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/agreements.js"></script>
+  <script src="js/rpc.js"></script>
+  <script src="js/networks.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
